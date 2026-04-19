@@ -43,7 +43,7 @@ fn main() {
 /// assert_eq!(add(2, 3), 5);
 /// assert_eq!(add(-1, 1), 0);
 /// ```
-fn add(_a: i32, _b: i32) -> i32 {
+fn add(a: i32, b: i32) -> i32 {
     a + b
 }
 
@@ -54,7 +54,7 @@ fn add(_a: i32, _b: i32) -> i32 {
 /// assert_eq!(multiply(3, 4), 12);
 /// assert_eq!(multiply(0, 99), 0);
 /// ```
-fn multiply(_a: i32, _b: i32) -> i32 {
+fn multiply(a: i32, b: i32) -> i32 {
     a * b
 }
 
@@ -69,7 +69,7 @@ fn multiply(_a: i32, _b: i32) -> i32 {
 /// assert!(is_even(4));
 /// assert!(!is_even(7));
 /// ```
-fn is_even(_n: i32) -> bool {
+fn is_even(n: i32) -> bool {
     n % 2 == 0
 }
 
@@ -85,7 +85,7 @@ fn is_even(_n: i32) -> bool {
 /// assert_eq!(max(3, 9), 9);
 /// assert_eq!(max(5, 5), 5);
 /// ```
-fn max(_a: i32, _b: i32) -> i32 {
+fn max(a: i32, b: i32) -> i32 {
     a.max(b)
 }
 
@@ -100,7 +100,7 @@ fn max(_a: i32, _b: i32) -> i32 {
 /// assert_eq!(square(5), 25);
 /// assert_eq!(square(0), 0);
 /// ```
-fn square(_n: i32) -> i32 {
+fn square(n: i32) -> i32 {
     n * n
 }
 
@@ -115,7 +115,7 @@ fn square(_n: i32) -> i32 {
 /// assert_eq!(reverse_string("hello"), "olleh");
 /// assert_eq!(reverse_string(""), "");
 /// ```
-fn reverse_string(_s: &str) -> String {
+fn reverse_string(s: &str) -> String {
     s.chars().rev().collect()
 }
 
@@ -126,7 +126,7 @@ fn reverse_string(_s: &str) -> String {
 /// assert_eq!(concat_with_separator(&["hello", "world"], "-"), "hello-world");
 /// assert_eq!(concat_with_separator(&[], ","), "");
 /// ```
-fn concat_with_separator(_words: &[&str], _sep: &str) -> String {
+fn concat_with_separator(words: &[&str], sep: &str) -> String {
     words.join(sep)
 }
 
@@ -141,7 +141,7 @@ fn concat_with_separator(_words: &[&str], _sep: &str) -> String {
 /// assert_eq!(find_max_in_vec(&[1, 5, 3]), Some(5));
 /// assert_eq!(find_max_in_vec(&[]), None);
 /// ```
-fn find_max_in_vec(_numbers: &[i32]) -> Option<i32> {
+fn find_max_in_vec(numbers: &[i32]) -> Option<i32> {
     numbers.iter().max().copied()
 }
 
@@ -152,7 +152,7 @@ fn find_max_in_vec(_numbers: &[i32]) -> Option<i32> {
 /// assert_eq!(count_evens(&[1, 2, 3, 4]), 2);
 /// assert_eq!(count_evens(&[]), 0);
 /// ```
-fn count_evens(_numbers: &[i32]) -> usize {
+fn count_evens(numbers: &[i32]) -> usize {
     numbers.iter().filter(|&&n| n % 2 == 0).count()
 }
 
